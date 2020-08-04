@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-function Todolista() {
-  return (
-    <div>
-      <p>TodoLista</p>
-    </div>
-  );
+class Todolista extends Component {
+  render() {
+    console.log(this.props.todolista)
+    return (
+      <div>
+        
+      </div>
+    );
+  }
 }
 
 export default Todolista;

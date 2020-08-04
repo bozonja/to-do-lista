@@ -29,7 +29,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>To Do Lista</h1>
-        <Todolista />
+        <Todolista todolista={this.state.todolista}/>
       </div>
     );
   }
