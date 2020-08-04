@@ -2,12 +2,9 @@ import React, { Component } from 'react';
 
 class Todolista extends Component {
   render() {
-    console.log(this.props.todolista)
-    return (
-      <div>
-        
-      </div>
-    );
+    return this.props.todolista.map((todoitem) => (
+      <h3>{todoitem.naslov}</h3>
+    ));
   }
 }
 
