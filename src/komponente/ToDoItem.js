@@ -12,7 +12,7 @@ class ToDoItem extends Component {
 
   render() {
     return (
-      <div style={this.ifCompletedAddLineThrough()}>
+      <div style={this.ifCompletedAddLineThrough()} className="todo-item">
         <p>
           {this.props.toDoItemData.title}
         </p>

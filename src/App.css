@@ -14,3 +14,9 @@ a {
   color: #333;
   text-decoration: none;
 }
+
+.todo-item {
+  padding: 0.8rem;
+  background-color: #f4f4f4;
+  border-bottom: 1px #ccc dotted;
+}
