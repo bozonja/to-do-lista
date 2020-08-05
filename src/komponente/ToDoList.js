@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import ToDoItem from "./ToDoItem";
 
 class ToDoList extends Component {
   render() {
-    return this.props.getToDoListData.map((toDoItem) => (
-      <h3>{toDoItem.naslov}</h3>
+    return this.props.getToDoListData.map((toDoItemData) => (
+      <ToDoItem toDoItemData={toDoItemData}/>
     ));
   }
 }

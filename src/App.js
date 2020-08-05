@@ -28,7 +28,6 @@ class App extends Component {
   render () {  
     return (
       <div className="App">
-        <h1>To Do Lista</h1>
         <ToDoList getToDoListData={this.state.todolistdata} />
       </div>
     );
