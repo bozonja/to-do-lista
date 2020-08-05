@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-import Todolista from './komponente/Todolista';
+import ToDoList from './komponente/ToDoList';
 
 class App extends Component {
   state = {
-    todolista: [
+    todolistdata: [
       {
         id: 1,
         naslov: "Baci smeće",
@@ -29,7 +29,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>To Do Lista</h1>
-        <Todolista todolista={this.state.todolista} />
+        <ToDoList getToDoListData={this.state.todolistdata} />
       </div>
     );
   }
