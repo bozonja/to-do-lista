@@ -3,9 +3,14 @@ import ToDoItem from "./ToDoItem";
 import PropTypes from "prop-types";
 
 class ToDoList extends Component {
+
   render() {
     return this.props.getToDoListData.map((toDoItemData) => (
-      <ToDoItem  key={toDoItemData.id} toDoItemData={toDoItemData}/>
+      <ToDoItem 
+        key={toDoItemData.id} 
+        toDoItemData={toDoItemData} 
+        toggleCompleted={this.props.toggleCompleted}
+      />
     ));
   }
 }

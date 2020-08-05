@@ -11,10 +11,13 @@ class ToDoItem extends Component {
   }
 
   render() {
+    const {id, title} = this.props.toDoItemData;
     return (
       <div style={this.ifCompletedAddLineThrough()} className="todo-item">
         <p>
-          {this.props.toDoItemData.title}
+          <input type="checkbox" onChange={this.props.toggleCompleted.bind
+          (this, id)} /> {''}
+          {title}
         </p>
       </div>
     )

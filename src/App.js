@@ -25,10 +25,22 @@ class App extends Component {
     ]
   }
 
-  render () {  
+  toggleCompleted = (id) => {
+    this.setState({todolistdata : this.state.todolistdata.map(toDoItemData => {
+      if(toDoItemData.id === id) {
+        toDoItemData.completed = !toDoItemData.completed
+      }
+      return toDoItemData;
+    })});
+  }
+
+  render() {  
     return (
       <div className="App">
-        <ToDoList getToDoListData={this.state.todolistdata} />
+        <ToDoList 
+          getToDoListData={this.state.todolistdata} 
+          toggleCompleted={this.toggleCompleted}
+        />
       </div>
     );
   }
