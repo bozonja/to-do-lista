@@ -4,7 +4,7 @@ import ToDoItem from "./ToDoItem";
 class ToDoList extends Component {
   render() {
     return this.props.getToDoListData.map((toDoItemData) => (
-      <ToDoItem toDoItemData={toDoItemData}/>
+      <ToDoItem  key={toDoItemData.id} toDoItemData={toDoItemData}/>
     ));
   }
 }
