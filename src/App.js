@@ -7,20 +7,20 @@ class App extends Component {
     todolistdata: [
       {
         id: 1,
-        naslov: "Baci smeće",
-        izvršeno: false
+        title: "Baci smeće",
+        completed: true
       },
 
       {
         id: 2,
-        naslov: "Zovni starog",
-        izvršeno: false
+        title: "Zovni starog",
+        completed: false
       },
 
       {
         id: 3,
-        naslov: "Otiđi po Alanu",
-        izvršeno: false
+        title: "Otiđi po Alanu",
+        completed: false
       }
     ]
   }

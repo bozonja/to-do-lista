@@ -3,9 +3,20 @@ import PropTypes from "prop-types";
 
 class ToDoItem extends Component {
 
+  ifCompletedAddLineThrough = () => {
+    return {
+      textDecoration: this.props.toDoItemData.completed ?
+      'line-through' : 'none'
+    }
+  }
+
   render() {
     return (
-      <p>{this.props.toDoItemData.naslov}</p>
+      <div style={this.ifCompletedAddLineThrough()}>
+        <p>
+          {this.props.toDoItemData.title}
+        </p>
+      </div>
     )
   }
 }
