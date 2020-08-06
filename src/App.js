@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
+import {BrowserRouter as Router, Route} from 'react-router-dom'
 import Header from './komponente/Header';
 import ToDoList from './komponente/ToDoList';
 import AddToDoItem from './komponente/AddToDoItem';
+import AboutApp from './komponente/AboutApp'
 import { v4 as uuidv4 } from 'uuid';
 
 class App extends Component {
@@ -54,15 +56,22 @@ class App extends Component {
   render() {  
     return (
       <div className="App">
-        <div className="container">
-          <Header />
-          <AddToDoItem addToDoItem={this.addToDoItem}/>
-          <ToDoList 
-            getToDoListData={this.state.todolistdata} 
-            toggleCompleted={this.toggleCompleted}
-            delToDoItem={this.delToDoItem}
-          />
-        </div>
+        <Router>
+          <div className="container">
+            <Header />
+            <Route exact path="/" render={komponente => (
+              <div>
+                <AddToDoItem addToDoItem={this.addToDoItem}/>
+                <ToDoList 
+                  getToDoListData={this.state.todolistdata} 
+                  toggleCompleted={this.toggleCompleted}
+                  delToDoItem={this.delToDoItem}
+                />
+              </div>
+            )} />
+            <Route path="/about" component={AboutApp} />
+          </div>
+        </Router>
       </div>
     );
   }
