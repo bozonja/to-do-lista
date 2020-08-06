@@ -34,12 +34,18 @@ class App extends Component {
     })});
   }
 
+  delToDoItem = (id) => {
+    this.setState({todolistdata: [...this.state.todolistdata.filter(toDoItemData => 
+      toDoItemData.id !== id)]})
+  }
+
   render() {  
     return (
       <div className="App">
         <ToDoList 
           getToDoListData={this.state.todolistdata} 
           toggleCompleted={this.toggleCompleted}
+          delToDoItem={this.delToDoItem}
         />
       </div>
     );

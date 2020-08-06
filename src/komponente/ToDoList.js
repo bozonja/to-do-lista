@@ -10,6 +10,7 @@ class ToDoList extends Component {
         key={toDoItemData.id} 
         toDoItemData={toDoItemData} 
         toggleCompleted={this.props.toggleCompleted}
+        delToDoItem={this.props.delToDoItem}
       />
     ));
   }

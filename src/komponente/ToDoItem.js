@@ -19,7 +19,7 @@ class ToDoItem extends Component {
           (this, id)} /> {''}
           {title}
           <button 
-            
+            onClick={this.props.delToDoItem.bind(this, id)}
             className="todo-item-button">x</button>
         </div>
       </div>
