@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Header from './komponente/Header';
 import ToDoList from './komponente/ToDoList';
 
 class App extends Component {
@@ -42,6 +43,7 @@ class App extends Component {
   render() {  
     return (
       <div className="App">
+        <Header />
         <ToDoList 
           getToDoListData={this.state.todolistdata} 
           toggleCompleted={this.toggleCompleted}

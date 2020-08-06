@@ -51,3 +51,10 @@ a {
 .ml-auto {
   margin-left: auto;
 }
+
+.header {
+  padding: 0.8rem;
+  text-align: center;
+  background-color: #333;
+  color: white;
+}
