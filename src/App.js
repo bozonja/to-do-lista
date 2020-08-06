@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from './komponente/Header';
 import ToDoList from './komponente/ToDoList';
+import AddToDoItem from './komponente/AddToDoItem';
 
 class App extends Component {
   state = {
@@ -40,15 +41,27 @@ class App extends Component {
       toDoItemData.id !== id)]})
   }
 
+  addToDoItem = (title) => {
+    const newToDo = {
+      id: 4,
+      title,
+      completed: false
+    }
+    this.setState({todolistdata: [...this.state.todolistdata, newToDo] })
+  }
+
   render() {  
     return (
       <div className="App">
-        <Header />
-        <ToDoList 
-          getToDoListData={this.state.todolistdata} 
-          toggleCompleted={this.toggleCompleted}
-          delToDoItem={this.delToDoItem}
-        />
+        <div className="container">
+          <Header />
+          <AddToDoItem addToDoItem={this.addToDoItem}/>
+          <ToDoList 
+            getToDoListData={this.state.todolistdata} 
+            toggleCompleted={this.toggleCompleted}
+            delToDoItem={this.delToDoItem}
+          />
+        </div>
       </div>
     );
   }

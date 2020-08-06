@@ -8,6 +8,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.4;
+  background-color: #bebebe;
 }
 
 a {
@@ -33,7 +34,6 @@ a {
 
   font-size: 1rem;
   cursor: pointer;
-  outline: none;
 }
 
 .todo-item-button:hover {
@@ -57,4 +57,31 @@ a {
   text-align: center;
   background-color: #333;
   color: white;
+}
+
+input[type=text] {
+  padding: 1rem;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1.3rem;
+  border: none;
+  
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: #555;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #666;
 }
