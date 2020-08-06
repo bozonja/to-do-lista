@@ -14,11 +14,14 @@ class ToDoItem extends Component {
     const {id, title} = this.props.toDoItemData;
     return (
       <div style={this.ifCompletedAddLineThrough()} className="todo-item">
-        <p>
+        <div className="d-flex align-items-center">
           <input type="checkbox" onChange={this.props.toggleCompleted.bind
           (this, id)} /> {''}
           {title}
-        </p>
+          <button 
+            
+            className="todo-item-button">x</button>
+        </div>
       </div>
     )
   }
