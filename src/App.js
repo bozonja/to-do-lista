@@ -3,24 +3,25 @@ import './App.css';
 import Header from './komponente/Header';
 import ToDoList from './komponente/ToDoList';
 import AddToDoItem from './komponente/AddToDoItem';
+import { v4 as uuidv4 } from 'uuid';
 
 class App extends Component {
   state = {
     todolistdata: [
       {
-        id: 1,
+        id: uuidv4(),
         title: "Baci smeće",
         completed: true
       },
 
       {
-        id: 2,
+        id: uuidv4(),
         title: "Zovni starog",
         completed: false
       },
 
       {
-        id: 3,
+        id: uuidv4(),
         title: "Otiđi po Alanu",
         completed: false
       }
@@ -43,7 +44,7 @@ class App extends Component {
 
   addToDoItem = (title) => {
     const newToDo = {
-      id: 4,
+      id: uuidv4(),
       title,
       completed: false
     }
