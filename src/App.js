@@ -59,7 +59,7 @@ class App extends Component {
         <Router>
           <div className="container">
             <Header />
-            <Route exact path="/" render={komponente => (
+            <Route exact path="/to-do-lista" render={komponente => (
               <div>
                 <AddToDoItem addToDoItem={this.addToDoItem}/>
                 <ToDoList 
